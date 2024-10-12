@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MAP AND ARRAGE ARRAY IN JS
+        </title>
+    </head>
+    <BODY>
+        <p>Ascending and Descending for mapped numbers</p>
+<p id="product_value"></p>
+
+<!-- Add two buttons for ascending and descending order functions -->
+<button onclick="ascending()">Ascending order</button>
+<button onclick="descending()">Descending order</button>
+
+<script>
+    // Create an array of numbers
+    var numbers = [25, 12, 19, 94];
+
+    // Function to multiply an input number by 50
+    function myFunction(num) {
+        return num * 50;
+    }
+
+    // Map the array with multiplication
+    var newarray = numbers.map(myFunction);
+
+    // Print the mapped values in the <p> tag with id 'product_value'
+    document.getElementById("product_value").innerHTML = "The Mapped values are: " + newarray;
+
+    // Ascending order function
+    function ascending() {
+        newarray.sort((a, b) => a - b);
+        document.getElementById("product_value").innerHTML = "Ascending: " + newarray;
+    }
+
+    // Descending order function
+    function descending() {
+        newarray.sort((a, b) => b - a);
+        document.getElementById("product_value").innerHTML = "Descending: " + newarray;
+    }
+</script>
+    </BODY>
+</html>
